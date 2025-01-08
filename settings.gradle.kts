@@ -9,6 +9,20 @@ pluginManagement {
         }
         mavenCentral()
         gradlePluginPortal()
+        maven(url = "https://jitpack.io")
+        maven(url = "https://maven.fabric.io/public")
+        maven {
+            url = uri("https://git.lepudev.com/api/v4/projects/268/packages/maven")
+            name  = "blepro"
+
+            credentials(HttpHeaderCredentials::class) {
+                name = "Deploy-Token"
+                value = "jMCHXv-upTT47AXegB1E"
+            }
+            authentication {
+                create<HttpHeaderAuthentication>("header")
+            }
+        }
     }
 }
 dependencyResolutionManagement {
@@ -16,6 +30,20 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven(url = "https://jitpack.io")
+        maven(url = "https://maven.fabric.io/public")
+        maven {
+            url = uri("https://git.lepudev.com/api/v4/projects/268/packages/maven")
+            name  = "blepro"
+
+            credentials(HttpHeaderCredentials::class) {
+                name = "Deploy-Token"
+                value = "jMCHXv-upTT47AXegB1E"
+            }
+            authentication {
+                create<HttpHeaderAuthentication>("header")
+            }
+        }
     }
 }
 
